@@ -62,6 +62,7 @@ public class BsMemberWithdrawalCB extends AbstractConditionBean {
         if (DBFluteConfig.getInstance().isSpecifyColumnRequired()) {
             enableSpecifyColumnRequired();
         }
+        xsetSpecifyColumnRequiredExceptDeterminer(DBFluteConfig.getInstance().getSpecifyColumnRequiredExceptDeterminer());
         if (DBFluteConfig.getInstance().isQueryUpdateCountPreCheck()) {
             enableQueryUpdateCountPreCheck();
         }
@@ -362,12 +363,12 @@ public class BsMemberWithdrawalCB extends AbstractConditionBean {
          */
         public SpecifiedColumn columnWithdrawalReasonInputText() { return doColumn("WITHDRAWAL_REASON_INPUT_TEXT"); }
         /**
-         * (退会日時)WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(23, 10)}
+         * (退会日時)WITHDRAWAL_DATETIME: {NotNull, TIMESTAMP(26, 6)}
          * @return The information object of specified column. (NotNull)
          */
         public SpecifiedColumn columnWithdrawalDatetime() { return doColumn("WITHDRAWAL_DATETIME"); }
         /**
-         * REGISTER_DATETIME: {NotNull, TIMESTAMP(23, 10)}
+         * REGISTER_DATETIME: {NotNull, TIMESTAMP(26, 6)}
          * @return The information object of specified column. (NotNull)
          */
         public SpecifiedColumn columnRegisterDatetime() { return doColumn("REGISTER_DATETIME"); }
@@ -377,7 +378,7 @@ public class BsMemberWithdrawalCB extends AbstractConditionBean {
          */
         public SpecifiedColumn columnRegisterUser() { return doColumn("REGISTER_USER"); }
         /**
-         * UPDATE_DATETIME: {NotNull, TIMESTAMP(23, 10)}
+         * UPDATE_DATETIME: {NotNull, TIMESTAMP(26, 6)}
          * @return The information object of specified column. (NotNull)
          */
         public SpecifiedColumn columnUpdateDatetime() { return doColumn("UPDATE_DATETIME"); }

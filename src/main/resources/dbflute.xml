@@ -6,27 +6,27 @@
 	<include path="rdb.xml"/>
 
 	<!-- The components of DBFlute Runtime. -->
-	<component name="introduction" class="org.dancingdb.dbflute.allcommon.DBFluteInitializer"/>
-	<component name="invokerAssistant" class="org.dancingdb.dbflute.allcommon.ImplementedInvokerAssistant"/>
+	<component name="introduction" class="org.docksidestage.dbflute.allcommon.DBFluteInitializer"/>
+	<component name="invokerAssistant" class="org.docksidestage.dbflute.allcommon.ImplementedInvokerAssistant"/>
 	<component name="behaviorCommandInvoker" class="org.dbflute.bhv.core.BehaviorCommandInvoker"/>
-	<component name="behaviorSelector" class="org.dancingdb.dbflute.allcommon.ImplementedBehaviorSelector"/>
-	<component name="commonColumnAutoSetupper" class="org.dancingdb.dbflute.allcommon.ImplementedCommonColumnAutoSetupper"/>
+	<component name="behaviorSelector" class="org.docksidestage.dbflute.allcommon.ImplementedBehaviorSelector"/>
+	<component name="commonColumnAutoSetupper" class="org.docksidestage.dbflute.allcommon.ImplementedCommonColumnAutoSetupper"/>
 
 	<!-- The components of Behavior. -->
-	<component name="memberBhv" class="org.dancingdb.dbflute.exbhv.MemberBhv"/>
-	<component name="memberAddressBhv" class="org.dancingdb.dbflute.exbhv.MemberAddressBhv"/>
-	<component name="memberFollowingBhv" class="org.dancingdb.dbflute.exbhv.MemberFollowingBhv"/>
-	<component name="memberLoginBhv" class="org.dancingdb.dbflute.exbhv.MemberLoginBhv"/>
-	<component name="memberSecurityBhv" class="org.dancingdb.dbflute.exbhv.MemberSecurityBhv"/>
-	<component name="memberServiceBhv" class="org.dancingdb.dbflute.exbhv.MemberServiceBhv"/>
-	<component name="memberStatusBhv" class="org.dancingdb.dbflute.exbhv.MemberStatusBhv"/>
-	<component name="memberWithdrawalBhv" class="org.dancingdb.dbflute.exbhv.MemberWithdrawalBhv"/>
-	<component name="productBhv" class="org.dancingdb.dbflute.exbhv.ProductBhv"/>
-	<component name="productCategoryBhv" class="org.dancingdb.dbflute.exbhv.ProductCategoryBhv"/>
-	<component name="productStatusBhv" class="org.dancingdb.dbflute.exbhv.ProductStatusBhv"/>
-	<component name="purchaseBhv" class="org.dancingdb.dbflute.exbhv.PurchaseBhv"/>
-	<component name="purchasePaymentBhv" class="org.dancingdb.dbflute.exbhv.PurchasePaymentBhv"/>
-	<component name="regionBhv" class="org.dancingdb.dbflute.exbhv.RegionBhv"/>
-	<component name="serviceRankBhv" class="org.dancingdb.dbflute.exbhv.ServiceRankBhv"/>
-	<component name="withdrawalReasonBhv" class="org.dancingdb.dbflute.exbhv.WithdrawalReasonBhv"/>
+	<component name="memberBhv" class="org.docksidestage.dbflute.exbhv.MemberBhv"/>
+	<component name="memberAddressBhv" class="org.docksidestage.dbflute.exbhv.MemberAddressBhv"/>
+	<component name="memberFollowingBhv" class="org.docksidestage.dbflute.exbhv.MemberFollowingBhv"/>
+	<component name="memberLoginBhv" class="org.docksidestage.dbflute.exbhv.MemberLoginBhv"/>
+	<component name="memberSecurityBhv" class="org.docksidestage.dbflute.exbhv.MemberSecurityBhv"/>
+	<component name="memberServiceBhv" class="org.docksidestage.dbflute.exbhv.MemberServiceBhv"/>
+	<component name="memberStatusBhv" class="org.docksidestage.dbflute.exbhv.MemberStatusBhv"/>
+	<component name="memberWithdrawalBhv" class="org.docksidestage.dbflute.exbhv.MemberWithdrawalBhv"/>
+	<component name="productBhv" class="org.docksidestage.dbflute.exbhv.ProductBhv"/>
+	<component name="productCategoryBhv" class="org.docksidestage.dbflute.exbhv.ProductCategoryBhv"/>
+	<component name="productStatusBhv" class="org.docksidestage.dbflute.exbhv.ProductStatusBhv"/>
+	<component name="purchaseBhv" class="org.docksidestage.dbflute.exbhv.PurchaseBhv"/>
+	<component name="purchasePaymentBhv" class="org.docksidestage.dbflute.exbhv.PurchasePaymentBhv"/>
+	<component name="regionBhv" class="org.docksidestage.dbflute.exbhv.RegionBhv"/>
+	<component name="serviceRankBhv" class="org.docksidestage.dbflute.exbhv.ServiceRankBhv"/>
+	<component name="withdrawalReasonBhv" class="org.docksidestage.dbflute.exbhv.WithdrawalReasonBhv"/>
 </components>
