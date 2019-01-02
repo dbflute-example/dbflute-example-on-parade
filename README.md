@@ -1,6 +1,6 @@
-LastaFlute Example Onparade
+DBFlute Example on Parade
 =======================
-example project for LastaFlute as single project (with H2)
+example project for DBFlute with LastaFlute as single project (with H2)
 
 LastaFlute:  
 https://github.com/lastaflute/lastaflute
@@ -27,7 +27,7 @@ and login by user 'Pixy' and password 'sea', and can see debug log at console.
 public class OnparadeBoot {
 
     public static void main(String[] args) {
-        new JettyBoot(8090, "/onparade").asDevelopment(isNoneEnv()).bootAwait();
+        new JettyBoot(8175, "/onparade").asDevelopment(isNoneEnv()).bootAwait();
     }
 }
 ```

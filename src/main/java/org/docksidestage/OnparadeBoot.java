@@ -23,7 +23,7 @@ import org.dbflute.jetty.JettyBoot;
 public class OnparadeBoot { // #change_it_first
 
     public static void main(String[] args) { // e.g. java -Dlasta.env=production -jar onparade.war
-        new JettyBoot(8090, "/onparade").asDevelopment(isNoneEnv()).bootAwait();
+        new JettyBoot(8174, "/onparade").asDevelopment(isNoneEnv()).bootAwait();
     }
 
     private static boolean isNoneEnv() {
