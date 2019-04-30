@@ -77,7 +77,7 @@ h4 {
 }
 
 /* -------------------------------------------------
-                              LastaFlute Contents
+                                   Document Basic
 ------------------------------------------------- */
 .doctitle {
     font-size: 1.2em;
@@ -102,6 +102,10 @@ p.docsubitem {
     color: #666666;
 }
 
+/* -------------------------------------------------
+                                     Table Layout
+------------------------------------------------- */
+/* table basic */
 table {
     border-collapse:collapse;
     margin: 0.3em 0 1em 0;
@@ -128,14 +132,8 @@ td {
     padding:0.5em 0 0.1em 1em;
     margin-bottom: 1em;
 }
-.fieldcomment {
-    font-size: 0.9em;
-    color: #3F7E5E;
-}
-.fieldannotations {
-    font-size: 0.9em;
-    color: #666666;
-}
+
+/* row and cell */
 .rowcell {
     white-space: nowrap;
 }
@@ -160,6 +158,25 @@ table.child, table.child td, table.child th {
     border-left: none;
     border-bottom: 1px solid #aaa;
     border-right: 1px solid #aaa;
+}
+
+/* -------------------------------------------------
+                                      Field Items
+------------------------------------------------- */
+.fieldcomment {
+    font-size: 0.9em;
+    color: #3F7E5E;
+}
+.fieldannotations {
+    font-size: 0.9em;
+    color: #666666;
+}
+.fieldpublicname {
+    color: #331100;
+}
+.fieldpropertyname {
+    font-size: 0.8em;
+    color: #444466;
 }
 .clsgroup {
     font-size: 1.2em;
@@ -690,15 +707,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>account</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -707,10 +725,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">account</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>password</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -719,6 +738,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">password</td>
     </tr>
 </table>
 
@@ -754,15 +774,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -771,10 +792,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberAccount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -783,10 +805,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberAccount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>password</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -795,10 +818,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">password</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>reminderQuestion</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -807,10 +831,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">reminderQuestion</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>reminderAnswer</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -819,6 +844,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">reminderAnswer</td>
     </tr>
 </table>
 
@@ -835,20 +861,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;s.tadokoro<br>@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>account</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -856,10 +883,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">account</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>token</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -867,6 +895,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">token</td>
     </tr>
 </table>
 
@@ -889,15 +918,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -906,10 +936,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>regularPrice</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -918,6 +949,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">regularPrice</td>
     </tr>
 </table>
 
@@ -933,20 +965,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;s.tadokoro<br>@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -954,6 +987,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">productId</td>
     </tr>
 </table>
 
@@ -962,15 +996,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -979,10 +1014,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productId</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>productName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -991,10 +1027,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>categoryName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1003,10 +1040,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">categoryName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>regularPrice</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1015,10 +1053,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">regularPrice</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>productHandleCode</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1027,6 +1066,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productHandleCode</td>
     </tr>
 </table>
 
@@ -1042,20 +1082,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;s.tadokoro<br>@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>pageNumber</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.dbflute.optional.OptionalThing&lt;java.lang.Integer&gt;">OptionalThing&lt;Integer&gt;</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1063,6 +1104,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">pageNumber</td>
     </tr>
 </table>
 
@@ -1072,15 +1114,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1089,10 +1132,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=10}
         </td>
+        <td class="fieldpropertyname">productName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>productStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$ProductStatus">CDef.ProductStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1100,10 +1144,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">productStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>purchaseMemberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1112,6 +1157,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=5}
         </td>
+        <td class="fieldpropertyname">purchaseMemberName</td>
     </tr>
 </table>
 
@@ -1120,15 +1166,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>pageSize</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title="row&nbsp;count&nbsp;per&nbsp;one&nbsp;page">row&nbsp;count&nbsp;per&nbsp;one&nbsp;page</p>
@@ -1137,10 +1184,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">pageSize</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>currentPageNumber</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title="number&nbsp;of&nbsp;current&nbsp;page">number&nbsp;of&nbsp;current&nbsp;page</p>
@@ -1149,10 +1197,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">currentPageNumber</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>allRecordCount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title="count&nbsp;of&nbsp;all&nbsp;records">count&nbsp;of&nbsp;all&nbsp;records</p>
@@ -1161,10 +1210,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">allRecordCount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>allPageCount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title="count&nbsp;of&nbsp;all&nbsp;pages">count&nbsp;of&nbsp;all&nbsp;pages</p>
@@ -1173,10 +1223,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">allPageCount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="2">5</td>
-        <td>rows</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.util.List&lt;org.docksidestage.app.web.lido.product.ProductRowResult&gt;">List&lt;ProductRowResult&gt;</p></td>
         <td class="fieldcomment">
             <p title="paging&nbsp;data&nbsp;for&nbsp;current&nbsp;page">paging&nbsp;data&nbsp;for&nbsp;current&nbsp;page</p>
@@ -1187,23 +1238,25 @@ to onparade
 ,
             &#64;Valid
         </td>
+        <td class="fieldpropertyname">rows</td>
     </tr>
     <tr>
-        <td colspan="4">
+        <td colspan="5">
             <div class="nestedbean">
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1212,10 +1265,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productId</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>productName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1224,10 +1278,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>productStatusName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1236,10 +1291,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">productStatusName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>regularPrice</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1248,6 +1304,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">regularPrice</td>
     </tr>
 </table>
 
@@ -1287,15 +1344,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1304,10 +1362,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberAccount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1316,10 +1375,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberAccount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>birthdate</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1328,10 +1388,11 @@ to onparade
         <td class="fieldannotations">
             &#64;ValidateTypeFailure
         </td>
+        <td class="fieldpropertyname">birthdate</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>memberStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1340,6 +1401,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberStatus</td>
     </tr>
 </table>
 
@@ -1357,20 +1419,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1378,6 +1441,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">memberId</td>
     </tr>
 </table>
 
@@ -1401,15 +1465,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1418,10 +1483,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">memberId</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1430,10 +1496,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>memberAccount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1442,10 +1509,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberAccount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>birthdate</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1454,10 +1522,11 @@ to onparade
         <td class="fieldannotations">
             &#64;ValidateTypeFailure
         </td>
+        <td class="fieldpropertyname">birthdate</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>formalizedDate</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1465,10 +1534,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">formalizedDate</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">6</td>
-        <td>memberStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1477,10 +1547,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">7</td>
-        <td>latestLoginDatetime</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDateTime">LocalDateTime</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1488,10 +1559,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">latestLoginDatetime</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">8</td>
-        <td>updateDatetime</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDateTime">LocalDateTime</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1499,10 +1571,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">updateDatetime</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">9</td>
-        <td>previousStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1511,10 +1584,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">previousStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">10</td>
-        <td>versionNo</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Long">Long</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1523,6 +1597,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">versionNo</td>
     </tr>
 </table>
 
@@ -1546,15 +1621,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1563,10 +1639,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">memberId</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1575,10 +1652,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>memberAccount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1587,10 +1665,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberAccount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>birthdate</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1599,10 +1678,11 @@ to onparade
         <td class="fieldannotations">
             &#64;ValidateTypeFailure
         </td>
+        <td class="fieldpropertyname">birthdate</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>formalizedDate</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1610,10 +1690,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">formalizedDate</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">6</td>
-        <td>memberStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1622,10 +1703,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">7</td>
-        <td>latestLoginDatetime</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDateTime">LocalDateTime</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1633,10 +1715,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">latestLoginDatetime</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">8</td>
-        <td>updateDatetime</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDateTime">LocalDateTime</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1644,10 +1727,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">updateDatetime</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">9</td>
-        <td>previousStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1656,10 +1740,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">previousStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">10</td>
-        <td>versionNo</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Long">Long</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1668,6 +1753,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required{groups=[ClientError]}
         </td>
+        <td class="fieldpropertyname">versionNo</td>
     </tr>
 </table>
 
@@ -1685,20 +1771,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>pageNumber</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.dbflute.optional.OptionalThing&lt;java.lang.Integer&gt;">OptionalThing&lt;Integer&gt;</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1706,6 +1793,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">pageNumber</td>
     </tr>
 </table>
 
@@ -1715,15 +1803,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1732,10 +1821,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=5}
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$MemberStatus">CDef.MemberStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1743,10 +1833,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">memberStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>purchaseProductName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1755,10 +1846,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=10}
         </td>
+        <td class="fieldpropertyname">purchaseProductName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>unpaid</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="boolean">boolean</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1766,10 +1858,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">unpaid</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>formalizedFrom</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1778,10 +1871,11 @@ to onparade
         <td class="fieldannotations">
             &#64;ValidateTypeFailure
         </td>
+        <td class="fieldpropertyname">formalizedFrom</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">6</td>
-        <td>formalizedTo</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.time.LocalDate">LocalDate</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1790,6 +1884,7 @@ to onparade
         <td class="fieldannotations">
             &#64;ValidateTypeFailure
         </td>
+        <td class="fieldpropertyname">formalizedTo</td>
     </tr>
 </table>
 
@@ -1807,20 +1902,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1828,10 +1924,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">memberId</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>pageNumber</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1839,6 +1936,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">pageNumber</td>
     </tr>
 </table>
 
@@ -1870,20 +1968,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productId</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.Integer">Integer</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1891,6 +1990,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">productId</td>
     </tr>
 </table>
 
@@ -1909,20 +2009,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>pageNumber</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.dbflute.optional.OptionalThing&lt;java.lang.Integer&gt;">OptionalThing&lt;Integer&gt;</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1930,6 +2031,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">pageNumber</td>
     </tr>
 </table>
 
@@ -1939,15 +2041,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>productName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1956,10 +2059,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=10}
         </td>
+        <td class="fieldpropertyname">productName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>productStatus</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$ProductStatus">CDef.ProductStatus</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1967,10 +2071,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">productStatus</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>purchaseMemberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -1979,6 +2084,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=5}
         </td>
+        <td class="fieldpropertyname">purchaseMemberName</td>
     </tr>
 </table>
 
@@ -2045,15 +2151,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>account</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2062,10 +2169,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">account</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>password</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2074,10 +2182,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">password</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>rememberMe</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="boolean">boolean</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2085,6 +2194,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">rememberMe</td>
     </tr>
 </table>
 
@@ -2150,15 +2260,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>memberName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2167,10 +2278,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberName</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>memberAccount</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2179,10 +2291,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">memberAccount</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">3</td>
-        <td>password</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2191,10 +2304,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">password</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">4</td>
-        <td>reminderQuestion</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2203,10 +2317,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">reminderQuestion</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">5</td>
-        <td>reminderAnswer</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2215,6 +2330,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">reminderAnswer</td>
     </tr>
 </table>
 
@@ -2232,20 +2348,21 @@ to onparade
 <span class="docannotations docsubvalue">&#64;Execute</span>
 </p>
 <p class="tablecomment" style="white-space:pre-wrap;">@author&nbsp;annie_pocket<br>@author&nbsp;jflute</p>
-<span class="doctitle">URL Parameter:</span>
+<span class="doctitle">Path Variables:</span>
 <table>
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>account</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2253,10 +2370,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">account</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>token</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2264,6 +2382,7 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">token</td>
     </tr>
 </table>
 
@@ -2303,15 +2422,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>domain</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2320,10 +2440,11 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">domain</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>serviceName</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2332,6 +2453,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Required
         </td>
+        <td class="fieldpropertyname">serviceName</td>
     </tr>
 </table>
 
@@ -2369,15 +2491,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>selectedReason</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$WithdrawalReason">CDef.WithdrawalReason</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2385,10 +2508,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">selectedReason</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>reasonInput</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2397,6 +2521,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=3}
         </td>
+        <td class="fieldpropertyname">reasonInput</td>
     </tr>
 </table>
 
@@ -2420,15 +2545,16 @@ to onparade
     <thead>
     <tr>
         <th class="rownumhead">No.</th>
-        <th>name</th>
+        <th>public name</th>
         <th>type</th>
         <th>comment</th>
         <th>annotations</th>
+        <th>property name</th>
     </tr>
     </thead>
     <tr>
         <td class="rowcellnum" rowspan="1">1</td>
-        <td>selectedReason</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="org.docksidestage.dbflute.allcommon.CDef$WithdrawalReason">CDef.WithdrawalReason</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2436,10 +2562,11 @@ to onparade
         </td>
         <td class="fieldannotations">
         </td>
+        <td class="fieldpropertyname">selectedReason</td>
     </tr>
     <tr>
         <td class="rowcellnum" rowspan="1">2</td>
-        <td>reasonInput</td>
+        <td class="fieldpublicname">${nestTypeDocMeta.publicName}</td>
         <td><p title="java.lang.String">String</p></td>
         <td class="fieldcomment">
             <p title=""></p>
@@ -2448,6 +2575,7 @@ to onparade
         <td class="fieldannotations">
             &#64;Length{max=3}
         </td>
+        <td class="fieldpropertyname">reasonInput</td>
     </tr>
 </table>
 
